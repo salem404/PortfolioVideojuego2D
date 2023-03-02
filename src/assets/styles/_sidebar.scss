@@ -1,0 +1,104 @@
+.sidebar {
+    background-color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+    margin: 0;
+    overflow: auto;
+    padding: 0;
+    position: fixed;
+    width: 100px;
+
+    &__tablink {
+        color: black;
+        display: block;
+        hover:not(.active) {
+            background-color: var(--rojo);
+            color: var(--blanco);
+        }
+        padding: 16px;
+        text-decoration: none;
+
+        &.active {
+            background-color: #04aa6d;
+            color: var(--blanco);
+        }
+        & .icon {
+            display: none;
+        }
+    }
+}
+
+div.content {
+    margin-left: 100px;
+}
+
+@media screen and (max-width: 700px) {
+    .sidebar {
+        flex-direction: row;
+        height: auto;
+        position: relative;
+        width: 100%;
+
+        button {
+            float: left;
+        }
+    }
+    div.content {
+        margin-left: 0;
+    }
+}
+
+// TODO: PONER ACORDEON
+@media screen and (max-width: 400px) {
+    .sidebar {
+        flex-direction: column;
+
+        button {
+            float: none;
+            text-align: center;
+        }
+    }
+    .icon {
+        display: block;
+    }
+}
+
+/* Style tab links */
+.tablink {
+    background-color: var(--azul);
+    border: none;
+    color: white;
+    cursor: pointer;
+    float: left;
+    font-size: 17px;
+    outline: none;
+    padding: 14px 16px;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    background-color: #ebebeb;
+    background-position: 0 0, 12px 12px;
+    background-size: 24px 24px;
+    color: var(--negro);
+    display: none;
+    margin: 1em;
+    opacity: 1;
+    padding: 100px 20px;
+
+    background-image: radial-gradient(#9d9d9d 0.6000000000000001px, transparent 0.6000000000000001px),
+        radial-gradient(#9d9d9d 0.6000000000000001px, #ebebeb 0.6000000000000001px);
+}
+
+#Home,
+#News,
+#Contact,
+#About {
+    background-color: var(--naranja);
+}

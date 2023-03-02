@@ -1,14 +1,23 @@
 {
-  "name": "vite-starter",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "portfoliovideojuego2d",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "start": "parcel",
+    "build": "parcel build"
   },
   "devDependencies": {
-    "vite": "^4.1.4"
+    "@parcel/transformer-sass": "^2.8.3",
+    "parcel": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salem404/PortfolioVideojuego2D.git"
+  },
+  "author": "Paula Rumeu Romero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/salem404/PortfolioVideojuego2D/issues"
   }
 }

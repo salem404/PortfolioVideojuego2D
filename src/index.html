@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemeotry's Adventure</title>
+    <link rel="icon" type="image/png" href="./assets/img/Triangulo.png" />
+    <link rel="stylesheet" href="./assets/styles/main.scss" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!--Barra lateral-->
+    <nav class="sidebar">
+      <button
+        class="sidebar__tablink"
+        onclick="openPage('Inicio', this, 'var(--naranja)')"
+        id="defaultOpen"
+      >
+        Inicio
+      </button>
+      <button
+        class="tablink"
+        onclick="openPage('Personajes', this, 'var(--naranja)')"
+      >
+        Personajes
+      </button>
+      <button
+        class="tablink"
+        onclick="openPage('Niveles', this, 'var(--naranja)')"
+      >
+        Niveles
+      </button>
+
+      <button class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </button>
+    </nav>
+
+    <!--Contenido general-->
+
+    <div class="content">
+      <section id="Inicio" class="tabcontent">
+        <article>
+          <h1>
+            <img src="./assets/img/logo.png" alt="Gemeotry's Adventure" />
+          </h1>
+          <p>Juego remolón</p>
+        </article>
+      </section>
+
+      <div id="Personajes" class="tabcontent">
+        <h2>Triangle</h2>
+        <!-- Images used to open the lightbox -->
+        <div class="row">
+          <div class="column">
+            <img
+              src="./assets/img/image.png"
+              onclick="openModal();currentSlide(1)"
+              class="hover-shadow"
+            />
+          </div>
+          <div class="column">
+            <img
+              src="./assets/img/ANGLELTRI.gif"
+              onclick="openModal();currentSlide(2)"
+              class="hover-shadow"
+            />
+          </div>
+          <div class="column">
+            <img
+              src="./assets/img/image (1).png"
+              onclick="openModal();currentSlide(3)"
+              class="hover-shadow"
+            />
+          </div>
+          <div class="column">
+            <img
+              src="./assets/img/Triangulo.png"
+              onclick="openModal();currentSlide(4)"
+              class="hover-shadow"
+            />
+          </div>
+        </div>
+
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal">
+          <span class="close cursor" onclick="closeModal()">&times;</span>
+          <div class="modal-content">
+            <div class="mySlides">
+              <div class="numbertext">1 / 4</div>
+              <img src="./assets/img/image.png" style="width: 100%" />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">2 / 4</div>
+              <img src="./assets/img/ANGLELTRI.gif" style="width: 100%" />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">3 / 4</div>
+              <img src="./assets/img/image (1).png" style="width: 100%" />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img src="./assets/img/Triangulo.png" style="width: 100%" />
+            </div>
+
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Caption text -->
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+
+            <!-- Thumbnail image controls -->
+            <div class="column">
+              <img
+                class="demo"
+                src="./assets/img/image.png"
+                onclick="currentSlide(1)"
+                alt="Primero"
+              />
+            </div>
+
+            <div class="column">
+              <img
+                class="demo"
+                src="./assets/img/ANGLELTRI.gif"
+                onclick="currentSlide(2)"
+                alt="Pixel"
+              />
+            </div>
+
+            <div class="column">
+              <img
+                class="demo"
+                src="./assets/img/image (1).png"
+                onclick="currentSlide(3)"
+                alt="Papita"
+              />
+            </div>
+
+            <div class="column">
+              <img
+                class="demo"
+                src="./assets/img/Triangulo.png"
+                onclick="currentSlide(4)"
+                alt="Final"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="Niveles" class="tabcontent">
+        <h2>Niveles</h2>
+        <img src="./assets/img/ezgif.com-optimize.gif" />
+        <img src="./assets/img/EscenarioOtoño.png" />
+        <p>Get in touch, or swing by for a cup of coffee.</p>
+      </div>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
