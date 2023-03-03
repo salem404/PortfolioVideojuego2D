@@ -15,156 +15,225 @@
   <body>
     <!--Barra lateral-->
     <nav class="sidebar">
+      <button class="icon" onclick="acordeon()">
+        <i class="fa fa-bars"></i>
+      </button>
       <button
         class="sidebar__tablink"
-        onclick="openPage('Inicio', this, 'var(--naranja)')"
+        onclick="openPage('Inicio',this)"
         id="defaultOpen"
       >
         Inicio
       </button>
-      <button
-        class="tablink"
-        onclick="openPage('Personajes', this, 'var(--naranja)')"
-      >
+      <button class="sidebar__tablink" onclick="openPage('Personajes',this)">
         Personajes
       </button>
-      <button
-        class="tablink"
-        onclick="openPage('Niveles', this, 'var(--naranja)')"
-      >
+      <button class="sidebar__tablink" onclick="openPage('Niveles',this)">
         Niveles
-      </button>
-
-      <button class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
       </button>
     </nav>
 
     <!--Contenido general-->
 
     <div class="content">
+      <!--Primera tab-->
       <section id="Inicio" class="tabcontent">
         <article>
-          <h1>
-            <img src="./assets/img/logo.png" alt="Gemeotry's Adventure" />
-          </h1>
-          <p>Juego remolón</p>
+          <picture>
+            <source media="(max-width:799px)" srcset="./assets/img/logo.png" />
+            <source
+              media="(min-width:800px)"
+              srcset="./assets/img/qse1xSOl_2x.jpg"
+            />
+            <img
+              class="inicio__imagen"
+              src="./assets/img/logo.png"
+              alt="Gemeotry's Adventure"
+            />
+          </picture>
+          <h1>Historia</h1>
+          <p>
+            Las tierras de Gemeotry se han sumido en el caos cuando Berub, la
+            goma, harta de ser la unica en Gemeotry que no posee una forma
+            geometrica, ha decidido borrar con su poder todo el reino. Es
+            entonces, entre la desesperación de los habitantes de Gemeotry que
+            asciende un heroe, el triángulo Letriang, que se embarca en la
+            aventura de recolectar los carboncillos de poder para devolverle al
+            reino su antiguo esplendor y detener a la malvada goma.
+          </p>
+        </article>
+        <article>
+          <h2>Continuará...</h2>
+          <video width="420" height="340" autoplay loop>
+            <source
+              src="./assets/video/pexels-weldi-studio-design-8675553.mp4"
+              type="video/mp4"
+            />
+            <source
+              src="./assets/video/pexels-weldi-studio-design-8675553.webm"
+              type="video/webm"
+            />
+            Tu navegador no soporta video
+          </video>
         </article>
       </section>
 
-      <div id="Personajes" class="tabcontent">
-        <h2>Triangle</h2>
-        <!-- Images used to open the lightbox -->
-        <div class="row">
-          <div class="column">
-            <img
-              src="./assets/img/image.png"
-              onclick="openModal();currentSlide(1)"
-              class="hover-shadow"
-            />
-          </div>
-          <div class="column">
-            <img
-              src="./assets/img/ANGLELTRI.gif"
-              onclick="openModal();currentSlide(2)"
-              class="hover-shadow"
-            />
-          </div>
-          <div class="column">
-            <img
-              src="./assets/img/image (1).png"
-              onclick="openModal();currentSlide(3)"
-              class="hover-shadow"
-            />
-          </div>
-          <div class="column">
-            <img
-              src="./assets/img/Triangulo.png"
-              onclick="openModal();currentSlide(4)"
-              class="hover-shadow"
-            />
-          </div>
-        </div>
+      <!--Segunda tab-->
 
-        <!-- The Modal/Lightbox -->
-        <div id="myModal" class="modal">
-          <span class="close cursor" onclick="closeModal()">&times;</span>
-          <div class="modal-content">
-            <div class="mySlides">
-              <div class="numbertext">1 / 4</div>
-              <img src="./assets/img/image.png" style="width: 100%" />
-            </div>
-
-            <div class="mySlides">
-              <div class="numbertext">2 / 4</div>
-              <img src="./assets/img/ANGLELTRI.gif" style="width: 100%" />
-            </div>
-
-            <div class="mySlides">
-              <div class="numbertext">3 / 4</div>
-              <img src="./assets/img/image (1).png" style="width: 100%" />
-            </div>
-
-            <div class="mySlides">
-              <div class="numbertext">4 / 4</div>
-              <img src="./assets/img/Triangulo.png" style="width: 100%" />
-            </div>
-
-            <!-- Next/previous controls -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-            <!-- Caption text -->
-            <div class="caption-container">
-              <p id="caption"></p>
-            </div>
-
-            <!-- Thumbnail image controls -->
-            <div class="column">
+      <section id="Personajes" class="tabcontent">
+        <h2>Letriang</h2>
+        <article>
+          <!-- Imagenes lightbox -->
+          <div class="row">
+            <div class="column2">
               <img
-                class="demo"
                 src="./assets/img/image.png"
-                onclick="currentSlide(1)"
-                alt="Primero"
+                onclick="openModal();currentSlide(1)"
+                class="hover-shadow"
               />
             </div>
-
-            <div class="column">
+            <div class="column2">
               <img
-                class="demo"
                 src="./assets/img/ANGLELTRI.gif"
-                onclick="currentSlide(2)"
-                alt="Pixel"
+                onclick="openModal();currentSlide(2)"
+                class="hover-shadow"
               />
             </div>
-
-            <div class="column">
+            <div class="column2">
               <img
-                class="demo"
                 src="./assets/img/image (1).png"
-                onclick="currentSlide(3)"
-                alt="Papita"
+                onclick="openModal();currentSlide(3)"
+                class="hover-shadow"
               />
             </div>
-
-            <div class="column">
+            <div class="column2">
               <img
-                class="demo"
                 src="./assets/img/Triangulo.png"
-                onclick="currentSlide(4)"
-                alt="Final"
+                onclick="openModal();currentSlide(4)"
+                class="hover-shadow"
               />
             </div>
           </div>
-        </div>
-      </div>
 
-      <div id="Niveles" class="tabcontent">
+          <!--  Modal/Lightbox -->
+          <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+              <div class="mySlides">
+                <div class="numbertext">1 / 4</div>
+                <img src="./assets/img/image.png" style="width: 100%" />
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">2 / 4</div>
+                <img src="./assets/img/ANGLELTRI.gif" style="width: 100%" />
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">3 / 4</div>
+                <img src="./assets/img/image (1).png" style="width: 100%" />
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">4 / 4</div>
+                <img src="./assets/img/Triangulo.png" style="width: 100%" />
+              </div>
+
+              <!-- Controles -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              <!-- Alt de las imagenes -->
+              <div class="caption-container">
+                <p id="caption"></p>
+              </div>
+
+              <!-- Miniaturas de control -->
+              <div class="column">
+                <img
+                  class="demo"
+                  src="./assets/img/image.png"
+                  onclick="currentSlide(1)"
+                  alt="Primigenio"
+                />
+              </div>
+
+              <div class="column">
+                <img
+                  class="demo"
+                  src="./assets/img/ANGLELTRI.gif"
+                  onclick="currentSlide(2)"
+                  alt="Pixel"
+                />
+              </div>
+
+              <div class="column">
+                <img
+                  class="demo"
+                  src="./assets/img/image (1).png"
+                  onclick="currentSlide(3)"
+                  alt="Papita"
+                />
+              </div>
+
+              <div class="column">
+                <img
+                  class="demo"
+                  src="./assets/img/Triangulo.png"
+                  onclick="currentSlide(4)"
+                  alt="Final"
+                />
+              </div>
+            </div>
+          </div>
+        </article>
+        <article>
+          <p>
+            Este personaje empezó siendo muy sencillo y básico, pero, al ser el
+            protagonista se le fueron añadiendo elementos.
+          </p>
+          <p>
+            Evitando la ternura del segundo diseño opté por darle una
+            personalidad más traviesa y puntiaguda. Añadiendo más figuras
+            geométricas a su diseño. Finalmente esta idea se descartó por
+            parecerse a un dorito.
+          </p>
+          <p>
+            Para el diseño final le suavicé los rasgos y lo hice con efecto 3D
+            como el villano. También le cambié el color para dar más la idea de
+            cartulina en vez de comida.
+          </p>
+        </article>
+      </section>
+
+      <!--Tercera tab-->
+
+      <section id="Niveles" class="tabcontent">
         <h2>Niveles</h2>
-        <img src="./assets/img/ezgif.com-optimize.gif" />
+        <audio controls>
+          <source src="./assets/audio/risk-136788.webm" type="audio/webm" />
+          <source src="./assets/audio/risk-136788.mp3" type="audio/mpeg" />
+          Tu navegador no soporta audio
+        </audio>
+        <button onClick="document.getElementsByTagName('audio')[1].play()">
+          Púlsame <img src="./assets/img/ezgif.com-optimize.gif" />
+        </button>
+        <h3>Otoño</h3>
         <img src="./assets/img/EscenarioOtoño.png" />
-        <p>Get in touch, or swing by for a cup of coffee.</p>
-      </div>
+        <h3>Otoño corrupto</h3>
+        <img src="./assets/img/EscenarioOtoñoManchas.png" />
+        <audio>
+          <source
+            src="./assets/audio/mixkit-big-fire-flame-burning-1331.webm"
+            type="audio/webm"
+          />
+          <source
+            src="./assets/audio/mixkit-big-fire-flame-burning-1331.mp3"
+            type="audio/mpeg"
+          />
+          Tu navegador no soporta audio
+        </audio>
+      </section>
     </div>
 
     <script src="assets/js/app.js"></script>

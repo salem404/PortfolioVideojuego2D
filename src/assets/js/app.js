@@ -1,28 +1,54 @@
+// ---------------------------------------------------------------- Tabs
 /**
  * Cambia la visibilidad de las tabs
  *
- * @param {*} pageName
  */
-function openPage(pageName) {
-  var i, tabcontent, tablinks
+function openPage(pageName, elmnt, color = "var(--naranja)") {
+  // Hide all elements with class="tabcontent" by default */
+  let i, tabcontent, tablinks
   tabcontent = document.getElementsByClassName("tabcontent")
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none"
   }
+
+  // Remove the background color of all tablinks/buttons
   tablinks = document.getElementsByClassName("sidebar__tablink")
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].style.backgroundColor = ""
   }
+
+  // Show the specific tab content
   document.getElementById(pageName).style.display = "block"
+
+  // Add the specific color to the button used to open the tab content
+  elmnt.style.backgroundColor = color
 }
 
-// Get the element with id="defaultOpen" and click on it
+// Hace click a la tab preestablecida
 document.getElementById("defaultOpen").click()
 
-var coll = document.getElementsByClassName("collapsible")
-var i
+// ---------------------------------------------------------------- Acordeón
 
-for (i = 0; i < coll.length; i++) {
+/**
+ * Menú acordeón
+ */
+function acordeon() {
+  let tablinks = document.getElementsByClassName("sidebar__tablink")
+  for (i = 0; i < tablinks.length; i++) {
+    console.log("a")
+    if (tablinks[i].style.display == "block") {
+      tablinks[i].style.display = "none"
+    } else {
+      tablinks[i].style.display = "block"
+    }
+  }
+}
+
+// ---------------------------------------------------------------- Lighthouse
+
+let coll = document.getElementsByClassName("collapsible")
+
+for (let i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function () {
     this.classList.toggle("active")
     var content = this.nextElementSibling
@@ -38,7 +64,6 @@ function openModal() {
   document.getElementById("myModal").style.display = "block"
 }
 
-// Close the Modal
 function closeModal() {
   document.getElementById("myModal").style.display = "none"
 }
@@ -46,28 +71,25 @@ function closeModal() {
 var slideIndex = 1
 showSlides(slideIndex)
 
-// Next/previous controls
 function plusSlides(n) {
   showSlides((slideIndex += n))
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
   showSlides((slideIndex = n))
 }
 
 function showSlides(n) {
-  var i
-  var slides = document.getElementsByClassName("mySlides")
-  var dots = document.getElementsByClassName("demo")
-  var captionText = document.getElementById("caption")
+  let slides = document.getElementsByClassName("mySlides")
+  let dots = document.getElementsByClassName("demo")
+  let captionText = document.getElementById("caption")
   if (n > slides.length) {
     slideIndex = 1
   }
   if (n < 1) {
     slideIndex = slides.length
   }
-  for (i = 0; i < slides.length; i++) {
+  for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none"
   }
   for (i = 0; i < dots.length; i++) {

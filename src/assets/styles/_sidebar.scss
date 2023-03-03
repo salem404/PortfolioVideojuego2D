@@ -8,30 +8,31 @@
     overflow: auto;
     padding: 0;
     position: fixed;
-    width: 100px;
-
+    width: 150px;
     &__tablink {
-        color: black;
+        background-color: var(--azul);
+        border: none;
+        color: var(--negro);
+        cursor: pointer;
+        float: left;
+        font-size: 17px;
+        outline: none;
+        padding: 16px 16px;
         display: block;
-        hover:not(.active) {
-            background-color: var(--rojo);
-            color: var(--blanco);
-        }
-        padding: 16px;
-        text-decoration: none;
+    }
 
-        &.active {
-            background-color: #04aa6d;
-            color: var(--blanco);
-        }
-        & .icon {
-            display: none;
-        }
+    &__tablink:hover {
+        background-color: var(--rojo);
+        color: var(--blanco);
     }
 }
 
-div.content {
-    margin-left: 100px;
+.icon {
+    display: none;
+}
+
+.content {
+    margin-left: 150px;
 }
 
 @media screen and (max-width: 700px) {
@@ -45,7 +46,7 @@ div.content {
             float: left;
         }
     }
-    div.content {
+    .content {
         margin-left: 0;
     }
 }
@@ -63,42 +64,4 @@ div.content {
     .icon {
         display: block;
     }
-}
-
-/* Style tab links */
-.tablink {
-    background-color: var(--azul);
-    border: none;
-    color: white;
-    cursor: pointer;
-    float: left;
-    font-size: 17px;
-    outline: none;
-    padding: 14px 16px;
-}
-
-.tablink:hover {
-    background-color: #777;
-}
-
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
-    background-color: #ebebeb;
-    background-position: 0 0, 12px 12px;
-    background-size: 24px 24px;
-    color: var(--negro);
-    display: none;
-    margin: 1em;
-    opacity: 1;
-    padding: 100px 20px;
-
-    background-image: radial-gradient(#9d9d9d 0.6000000000000001px, transparent 0.6000000000000001px),
-        radial-gradient(#9d9d9d 0.6000000000000001px, #ebebeb 0.6000000000000001px);
-}
-
-#Home,
-#News,
-#Contact,
-#About {
-    background-color: var(--naranja);
 }
