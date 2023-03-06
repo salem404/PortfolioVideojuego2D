@@ -51,16 +51,18 @@
               alt="Gemeotry's Adventure"
             />
           </picture>
-          <h1>Historia</h1>
-          <p>
-            Las tierras de Gemeotry se han sumido en el caos cuando Berub, la
-            goma, harta de ser la unica en Gemeotry que no posee una forma
-            geometrica, ha decidido borrar con su poder todo el reino. Es
-            entonces, entre la desesperación de los habitantes de Gemeotry que
-            asciende un heroe, el triángulo Letriang, que se embarca en la
-            aventura de recolectar los carboncillos de poder para devolverle al
-            reino su antiguo esplendor y detener a la malvada goma.
-          </p>
+          <div class="post-it">
+            <h1>Historia</h1>
+            <p>
+              Las tierras de Gemeotry se han sumido en el caos cuando Berub, la
+              goma, harta de ser la unica en Gemeotry que no posee una forma
+              geometrica, ha decidido borrar con su poder todo el reino. Es
+              entonces, entre la desesperación de los habitantes de Gemeotry que
+              asciende un heroe, el triángulo Letriang, que se embarca en la
+              aventura de recolectar los carboncillos de poder para devolverle
+              al reino su antiguo esplendor y detener a la malvada goma.
+            </p>
+          </div>
         </article>
         <article>
           <h2>Continuará...</h2>
@@ -219,9 +221,40 @@
           Púlsame <img src="./assets/img/ezgif.com-optimize.gif" />
         </button>
         <h3>Otoño</h3>
-        <img src="./assets/img/EscenarioOtoño.png" />
+        <picture>
+          <source
+            media="(max-width:334px)"
+            srcset="./assets/img/EscenarioOtoñoTiny.png"
+          />
+          <source
+            media="(max-width:699px)"
+            srcset="./assets/img/EscenarioOtoñoSmall.png"
+          />
+          <source
+            media="(min-width:700px)"
+            srcset="./assets/img/EscenarioOtoño.png"
+          />
+          <img src="./assets/img/EscenarioOtoño.png" alt="Escenario otoño" />
+        </picture>
         <h3>Otoño corrupto</h3>
-        <img src="./assets/img/EscenarioOtoñoManchas.png" />
+        <picture>
+          <source
+            media="(max-width:334px)"
+            srcset="./assets/img/EscenarioOtoñoManchasTiny.png"
+          />
+          <source
+            media="(max-width:699px)"
+            srcset="./assets/img/EscenarioOtoñoManchasSmall.png"
+          />
+          <source
+            media="(min-width:700px)"
+            srcset="./assets/img/EscenarioOtoñoManchas.png"
+          />
+          <img
+            src="./assets/img/EscenarioOtoñoManchas.png"
+            alt="Escenario otoño"
+          />
+        </picture>
         <audio>
           <source
             src="./assets/audio/mixkit-big-fire-flame-burning-1331.webm"
